@@ -127,3 +127,7 @@ limitations under the License.
 ### Disclaimer
 
 This is not an officially supported Google product.
+
+## Secret scanning
+
+A [gitleaks](https://github.com/gitleaks/gitleaks) workflow (`.github/workflows/secret-scan.yml`) runs **every hour**. Each run reviews commits from the **last 7 days**, and a full-history scan runs weekly (Monday 03:17 UTC) or on demand. Findings are redacted, summarized in the job summary, and fail the run. Verified false positives go in `.gitleaks.toml`.
